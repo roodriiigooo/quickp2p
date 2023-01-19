@@ -1,11 +1,16 @@
 {
-  "main.js": "/quickp2p/static/js/main.98e549c0.chunk.js",
-  "main.js.map": "/quickp2p/static/js/main.98e549c0.chunk.js.map",
-  "runtime~main.js": "/quickp2p/static/js/runtime~main.75399bbd.js",
-  "runtime~main.js.map": "/quickp2p/static/js/runtime~main.75399bbd.js.map",
-  "static/js/2.6218f2d0.chunk.js": "/quickp2p/static/js/2.6218f2d0.chunk.js",
-  "static/js/2.6218f2d0.chunk.js.map": "/quickp2p/static/js/2.6218f2d0.chunk.js.map",
-  "index.html": "/quickp2p/index.html",
-  "precache-manifest.3b5e05ec6696091495b7f484bfbd5e01.js": "/quickp2p/precache-manifest.3b5e05ec6696091495b7f484bfbd5e01.js",
-  "service-worker.js": "/quickp2p/service-worker.js"
+  "main.css": "/nestation/static/css/main.ccf3a354.chunk.css",
+  "main.js": "/nestation/static/js/main.3a35ced1.chunk.js",
+  "main.js.map": "/nestation/static/js/main.3a35ced1.chunk.js.map",
+  "runtime~main.js": "/nestation/static/js/runtime~main.f5c8d64f.js",
+  "runtime~main.js.map": "/nestation/static/js/runtime~main.f5c8d64f.js.map",
+  "static/css/2.4cc1c16f.chunk.css": "/nestation/static/css/2.4cc1c16f.chunk.css",
+  "static/js/2.63e4714d.chunk.js": "/nestation/static/js/2.63e4714d.chunk.js",
+  "static/js/2.63e4714d.chunk.js.map": "/nestation/static/js/2.63e4714d.chunk.js.map",
+  "index.html": "/nestation/index.html",
+  "precache-manifest.a33f263374a39d36e2a0545b28d864cd.js": "/nestation/precache-manifest.a33f263374a39d36e2a0545b28d864cd.js",
+  "service-worker.js": "/nestation/service-worker.js",
+  "static/css/2.4cc1c16f.chunk.css.map": "/nestation/static/css/2.4cc1c16f.chunk.css.map",
+  "static/css/main.ccf3a354.chunk.css.map": "/nestation/static/css/main.ccf3a354.chunk.css.map",
+  "static/media/halu.svg": "/nestation/static/media/halu.365ed8d4.svg"
 }
