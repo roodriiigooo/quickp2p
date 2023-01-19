@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import styles from "./BalloonMessage.module.css";
-import haluImage from "../assets/halu.svg";
+// import haluImage from "../assets/halu.svg";
 import rodrigoImage from "../assets/rodrigo_profile_picture.png"
 import classNames from "classnames";
 
