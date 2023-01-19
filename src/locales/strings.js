@@ -21,7 +21,7 @@ export default {
 	settings: "Configurações",
 	shareThis: "Compartilhe o",
 	sound: "Som",
-	swap: "Swap",
+	swap: "Passa o controle",
 	swapButton: "RB",
 	toPlayWithSomeone: "para jogar com alguém!",
 	waiting: "Aguardando...",

@@ -42,8 +42,8 @@ class Config {
 			buffering: LOW,
 			crt: true,
 			input: {
-				" ": "BUTTON_A",
-				d: "BUTTON_B",
+				z: "BUTTON_A",
+				x: "BUTTON_B",
 				Delete: "BUTTON_SELECT",
 				Enter: "BUTTON_START",
 				ArrowUp: "BUTTON_UP",
