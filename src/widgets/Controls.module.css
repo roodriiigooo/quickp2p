@@ -1,0 +1,36 @@
+.controls {
+	min-width: 200px;
+	background-color: #222222;
+	display: inline-block;
+	border-radius: 16px;
+	padding: 8px;
+	font-size: 0.5em;
+	user-select: none;
+	z-index: 1;
+}
+
+.title {
+	color: #0e85b0;
+}
+
+.controller {
+	display: flex;
+	justify-content: space-between;
+}
+
+.dpad {
+	align-self: flex-start;
+	color: #999999;
+	margin-right: 10px;
+}
+
+.buttons {
+	align-self: flex-end;
+	color: #d02604;
+	margin-left: 10px;
+}
+
+.centered {
+	display: flex;
+	justify-content: center;
+}

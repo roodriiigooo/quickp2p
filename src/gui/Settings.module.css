@@ -1,0 +1,22 @@
+.settings {
+	user-select: none;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	justify-content: center;
+}
+
+.closeButton {
+	position: absolute !important;
+	z-index: 1;
+	top: 4px;
+	right: 4px;
+}
+
+.setDefaultsButton {
+	position: absolute !important;
+	font-size: 0.75em;
+	z-index: 1;
+	bottom: 4px;
+	right: 4px;
+}

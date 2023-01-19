@@ -1,0 +1,41 @@
+.header {
+	width: 100%;
+	position: absolute;
+	user-select: none;
+	pointer-events: none;
+	z-index: 1;
+}
+
+.small {
+	transform: scale(0.5);
+	transform-origin: 0 0;
+	pointer-events: all;
+}
+
+.message {
+	position: absolute;
+}
+
+.title {
+	position: absolute;
+	top: 0;
+	right: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.titleLogo {
+	transform: scale(0.8);
+	transform-origin: 1 1;
+}
+
+.titleText {
+	font-size: 0.7em;
+	margin-left: 8px;
+	vertical-align: text-bottom;
+}
+
+.link {
+	pointer-events: all;
+}

@@ -1,0 +1,42 @@
+html {
+	height: 100%;
+}
+
+body {
+	min-height: 100%;
+	margin: 0;
+
+	background-color: #000000;
+	color: white;
+	overflow: hidden;
+}
+
+.nes-balloon {
+	color: black;
+}
+
+html,
+body,
+pre,
+code,
+kbd,
+samp {
+	font-family: "Press Start 2P";
+}
+
+.blink {
+	animation: flash 0.5s linear;
+	animation-iteration-count: 1;
+}
+
+@keyframes flash {
+	0% {
+		background-color: transparent;
+	}
+	50% {
+		background-color: #ffffff;
+	}
+	100% {
+		background-color: transparent;
+	}
+}
