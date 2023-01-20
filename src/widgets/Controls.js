@@ -63,7 +63,7 @@ export default class Controls extends Component {
 								{this._keyFor("BUTTON_B")} {this._keyFor("BUTTON_A")}
 							</span>
 						</div>
-						<div className={styles.centered}>
+						<div className={styles.startSelect}>
 							{this._keyFor("BUTTON_SELECT")} {this._keyFor("BUTTON_START")}
 						</div>
 					</>

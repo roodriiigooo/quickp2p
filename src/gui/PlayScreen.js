@@ -14,6 +14,7 @@ import styles from "./PlayScreen.module.css";
 import strings from "../locales";
 import classNames from "classnames";
 import _ from "lodash";
+import {Animated} from "react-animated-css";
 
 // DEBUG
 window.bus = require("../events").default;
@@ -31,11 +32,14 @@ export default class PlayScreen extends Component {
 				{syncer ? (
 					<Header>{strings.connected}</Header>
 				) : token ? (
+					<Animated animationIn="bounceInLeft" animationOut="fadeOut" isVisible={true}>
+
 					<JoinHeader
 						onSyncer={this._onSyncer}
 						onError={this._onError}
 						token={token}
 					/>
+					</Animated>
 				) : (
 					<InviteHeader
 						onSyncer={this._onSyncer}
@@ -74,11 +78,15 @@ export default class PlayScreen extends Component {
 				}
 
 				<div className={styles.controls}>
-					<Controls />
+					<Animated animationIn="bounceInDown" animationOut="fadeOut" isVisible={true}>
+						<Controls />
+					</Animated>
 				</div>
 
 				<div className={styles.menu}>
-					<SettingsButton />
+					<Animated animationIn="bounceInRight" animationOut="fadeOut" isVisible={true}>
+						<SettingsButton />
+					</Animated>
 				</div>
 			</div>
 		);

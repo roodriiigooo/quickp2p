@@ -3,6 +3,8 @@ import BalloonMessage from "./BalloonMessage";
 import styles from "./Header.module.css";
 import classNames from "classnames";
 import _ from "lodash";
+import {Animated} from "react-animated-css";
+
 
 export default class Header extends Component {
 	state = { bytes: null };
@@ -14,11 +16,14 @@ export default class Header extends Component {
 			<div className={styles.header}>
 				<div className={styles.small}>
 					{!_.isEmpty(children) && (
-						<BalloonMessage
-							className={classNames(styles.message, styles.small)}
-						>
-							{children}
-						</BalloonMessage>
+						<Animated animationIn="bounceInLeft" animationOut="fadeOut" isVisible={true}>
+
+							<BalloonMessage
+								className={classNames(styles.message, styles.small)}
+							>
+								{children}
+							</BalloonMessage>
+						</Animated>
 					)}
 				</div>
 

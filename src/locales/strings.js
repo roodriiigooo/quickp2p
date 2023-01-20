@@ -2,7 +2,7 @@ export default {
 	buffering: "Buffering",
 	connected: "Conectado!",
 	connecting: "Conectando...",
-	controls: "-Seu Controle-",
+	controls: "- Seu Controle -",
 	copied: "Copiado!",
 	crtEffect: "Efeito CRT",
 	dragARomHere: "Arrasste uma ROM de NES aqui!",

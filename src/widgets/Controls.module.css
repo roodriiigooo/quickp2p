@@ -1,16 +1,29 @@
 .controls {
 	min-width: 200px;
-	background-color: #222222;
 	display: inline-block;
-	border-radius: 16px;
+	border-radius: 3px;
 	padding: 8px;
 	font-size: 0.5em;
 	user-select: none;
 	z-index: 1;
+	color: black;
+	border-image-slice: 3;
+    border-image-width: 3;
+    border-image-repeat: stretch;
+	border-image-source:  #161415 url('./../assets/balao.svg');
+	border-image-outset: 2;
+    padding: 1rem 1.5rem;
+    margin: 8px;
+    margin-bottom: 30px;
+    background-color: #fff;
+	border-style: solid;
+    border-width: 2px;
+	box-sizing: border-box;
 }
 
 .title {
 	color: #0e85b0;
+	padding: 2px;
 }
 
 .controller {
@@ -20,7 +33,7 @@
 
 .dpad {
 	align-self: flex-start;
-	color: #999999;
+	color: black;  
 	margin-right: 10px;
 }
 
@@ -31,6 +44,12 @@
 }
 
 .centered {
+	display: flex;
+	justify-content: center;
+}
+
+.startSelect{
+	margin-top: 5px;
 	display: flex;
 	justify-content: center;
 }
