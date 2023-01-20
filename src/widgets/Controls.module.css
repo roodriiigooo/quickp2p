@@ -10,14 +10,14 @@
 	border-image-slice: 3;
     border-image-width: 3;
     border-image-repeat: stretch;
-	border-image-source:  #161415 url('./../assets/balao.svg');
+	border-image-source: url('./../assets/balao.svg');
 	border-image-outset: 2;
     padding: 1rem 1.5rem;
     margin: 8px;
     margin-bottom: 30px;
     background-color: #fff;
 	border-style: solid;
-    border-width: 2px;
+    border-width: 4px;
 	box-sizing: border-box;
 }
 

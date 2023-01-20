@@ -5,7 +5,7 @@ export default {
 	controls: "- Seu Controle -",
 	copied: "Copiado!",
 	crtEffect: "Efeito CRT",
-	dragARomHere: "Arrasste uma ROM de NES aqui!",
+	dragARomHere: "Arraste uma ROM de NES aqui!",
 	enabled_false: "Desabilitado",
 	enabled_true: "Habilitado",
 	errors: {
