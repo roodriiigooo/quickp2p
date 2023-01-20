@@ -2,6 +2,12 @@
 	display: flex;
 	height: 100vh;
 	flex-direction: column;
+	background: #161415 url(https://rodrigo.londrina.br/images/header-background.png) no-repeat top center;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-ms-background-size: cover;
+	-o-background-size: cover;
 }
 
 .main {
