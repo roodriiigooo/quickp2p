@@ -13,7 +13,7 @@ export default {
 		invalidRom: "ROM inválida :(",
 		serverIsDown: "O servidor multiplayer não está online :("
 	},
-	input: "Input",
+	input: "Controle",
 	link: "link",
 	loading: "Carregando...",
 	pressStart: "APERTE START",
