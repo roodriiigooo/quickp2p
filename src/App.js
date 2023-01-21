@@ -2,6 +2,7 @@ import React, { PureComponent } from "react";
 import PlayScreen from "./gui/PlayScreen";
 import querystring from "query-string";
 import quickp2p, { SimpleStore } from "quickp2p";
+import PlayScreenEgg from "./gui/PlayScreenEgg";
 
 quickp2p.setStore(new SimpleStore("https://63c989b6c4deac000933aa2f--serene-alpaca-06cc9b.netlify.app/.netlify/functions/server"));
 // quickp2p.setStore(new SimpleStore("http://localhost:5000"));
@@ -13,7 +14,12 @@ export default class App extends PureComponent {
 
 		if (route.startsWith("#/join"))
 			return <PlayScreen token={this.inviteToken} />;
-		else return <PlayScreen />;
+		else 
+		if (route.startsWith("#/egg")) {
+			return <PlayScreenEgg egg={ this.eggToken } />;
+		}
+		else
+		return <PlayScreen />;
 	}
 
 	UNSAFE_componentWillMount() {
@@ -28,5 +34,9 @@ export default class App extends PureComponent {
 
 	get inviteToken() {
 		return querystring.parse(window.location.search).token;
+	}
+
+	get eggToken() {
+		return querystring.parse(window.location.search).egg;
 	}
 }

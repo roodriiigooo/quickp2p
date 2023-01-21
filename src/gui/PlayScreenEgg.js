@@ -10,32 +10,36 @@ import SettingsButton from "../widgets/SettingsButton";
 import helpers from "./helpers";
 import config from "../config";
 import bus from "../events";
-import styles from "./PlayScreen.module.css";
+import styles from "./PlayScreenEgg.module.css";
 import strings from "../locales";
 import classNames from "classnames";
 import _ from "lodash";
 import {Animated} from "react-animated-css";
+// import PlayScreen from "./PlayScreen";
+
 
 // DEBUG
 window.bus = require("../events").default;
 window.config = require("../config").default;
 
-export default class PlayScreen extends Component {
+export default class PlayScreenEgg extends Component {
 	state = { rom: null, syncer: null };
+	egg = this.props.egg;
 
 	render() {
 		const { token } = this.props;
 		const { rom, syncer } = this.state;
-		// const { egg } = this.props;
+		
 
 		// console.log('Token: ' +token);
 		// console.log('Rom: ' +rom);
 		// console.log('Syncer: ' +syncer);
-		// console.log('egg: ' +egg);
-		// console.log('raw: ' +raw);
-
+		// console.log(this.props.egg)
+		// console.log('egg: ' + this.egg);
+		
+		
 		return (
-			<div className={styles.app}>
+			<div className={styles.appegg}>
 				{syncer ? (
 					<Header>{strings.connected}</Header>
 				) : token ? (
@@ -102,7 +106,8 @@ export default class PlayScreen extends Component {
 	componentDidMount() {
 		window.addEventListener("dragover", this._ignore);
 		window.addEventListener("dragenter", this._ignore);
-		window.addEventListener("drop", this._onFileDrop);
+		window.addEventListener("drop", this._ignore);
+		window.addEventListener('load', this.load);
 		if (config.options.crt)
 			document.querySelector("#container").classList.add("crt");
 	}
@@ -110,7 +115,9 @@ export default class PlayScreen extends Component {
 	componentWillUnmount() {
 		window.removeEventListener("dragover", this._ignore);
 		window.removeEventListener("dragenter", this._ignore);
-		window.removeEventListener("drop", this._onFileDrop);
+		window.removeEventListener("drop", this._ignore);
+		window.removeEventListener('load', this.load)  
+
 	}
 
 	_onSyncer = (syncer) => {
@@ -181,6 +188,47 @@ export default class PlayScreen extends Component {
 		var bb = new Blob([ab]);
 		return bb;
 	}
+
+
+	loadBinary(path, callback) {
+		var req = new XMLHttpRequest();
+		req.open("GET", path);
+		req.responseType = "arraybuffer";
+		req.addEventListener('load', function() {
+		  if (req.status === 200) {
+			callback(null, this.response);
+		  } else {
+			callback(new Error(req.statusText));
+		  }
+		});
+		req.onerror = function() {
+		  callback(new Error(req.statusText));
+		};
+		req.send();
+	}
+	
+	
+	load = () => {
+		this.loadBinary('https://raw.githubusercontent.com/roodriiigooo/EGGS/main/' +this.egg, (err, data) => {
+		  if (err) {
+			this.syncer = { rom: null, syncer: null };
+			helpers.cleanQueryString();
+			this._onError();
+			// return <PlayScreen />;
+			// window.alert(`Error loading ROM: ${err.toString()}`);
+		  } else {
+			this.handleLoaded(data);
+		  }
+		});
+	  };
+	
+	handleLoaded = data => {
+		this.setState({ rom: null });
+		this.setState({ syncer: null });
+		helpers.cleanQueryString();
+		if (this.state.syncer) this.state.syncer.updateRom(data);
+			else this._loadRom(data);
+	};
 
 	
 }

@@ -1,0 +1,41 @@
+.appegg {
+	display: flex;
+	height: 100vh;
+	flex-direction: column;
+	background: #161415 url(https://rodrigo.londrina.br/images/header-background.png) no-repeat top center;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-ms-background-size: cover;
+	-o-background-size: cover;
+}
+
+.main {
+	display: flex;
+	flex: 1;
+	justify-content: center;
+	align-items: center;
+}
+
+.gameContainer {
+	width: 50vw;
+	padding: 0 !important;
+}
+
+.overlay {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.controls {
+	position: absolute;
+	left: 16px;
+	top: 16px;
+}
+
+.menu {
+	position: absolute;
+	right: 8px;
+	top: 8px;
+}
