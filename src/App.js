@@ -4,9 +4,10 @@ import querystring from "query-string";
 import quickp2p, { SimpleStore } from "quickp2p";
 import PlayScreenEgg from "./gui/PlayScreenEgg";
 
-quickp2p.setStore(new SimpleStore("https://63c989b6c4deac000933aa2f--serene-alpaca-06cc9b.netlify.app/.netlify/functions/server"));
+quickp2p.setStore(
+	new SimpleStore("https://roodriiigooo-token-holder.netlify.app/")
+);
 // quickp2p.setStore(new SimpleStore("http://localhost:5000"));
-
 
 export default class App extends PureComponent {
 	render() {
@@ -14,12 +15,9 @@ export default class App extends PureComponent {
 
 		if (route.startsWith("#/join"))
 			return <PlayScreen token={this.inviteToken} />;
-		else 
-		if (route.startsWith("#/egg")) {
-			return <PlayScreenEgg egg={ this.eggToken } />;
-		}
-		else
-		return <PlayScreen />;
+		else if (route.startsWith("#/egg")) {
+			return <PlayScreenEgg egg={this.eggToken} />;
+		} else return <PlayScreen />;
 	}
 
 	UNSAFE_componentWillMount() {
