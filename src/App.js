@@ -5,7 +5,9 @@ import quickp2p, { SimpleStore } from "quickp2p";
 import PlayScreenEgg from "./gui/PlayScreenEgg";
 
 quickp2p.setStore(
-	new SimpleStore("https://roodriiigooo-token-holder.netlify.app/")
+	new SimpleStore(
+		"https://roodriiigooo-token-holder.netlify.app/.netlify/functions/server"
+	)
 );
 // quickp2p.setStore(new SimpleStore("http://localhost:5000"));
 
