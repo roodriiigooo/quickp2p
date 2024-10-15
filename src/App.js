@@ -16,10 +16,10 @@ export default class App extends PureComponent {
 	render() {
 		const route = window.location.hash;
 
-		if (route.startsWith("#/join"))
+		if (route.startsWith("#/join")) {
 			return <PlayScreen token={this.inviteToken} />;
-		else if (route.startsWith("#/egg")) {
-			return <PlayScreenEgg egg={this.eggToken} />;
+			// else if (route.startsWith("#/egg")) {
+			// 	return <PlayScreenEgg egg={this.eggToken} />;
 		} else return <PlayScreen />;
 	}
 
