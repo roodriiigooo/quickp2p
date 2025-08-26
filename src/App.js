@@ -2,7 +2,7 @@ import React, { PureComponent } from "react";
 import PlayScreen from "./gui/PlayScreen";
 import querystring from "query-string";
 import quickp2p, { SimpleStore } from "quickp2p";
-import PlayScreenEgg from "./gui/PlayScreenEgg";
+// import PlayScreenEgg from "./gui/PlayScreenEgg";
 
 // quickp2p.setStore(new SimpleStore("https://misc.r-labs.io"));
 quickp2p.setStore(
