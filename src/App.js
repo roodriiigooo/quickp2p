@@ -5,7 +5,11 @@ import quickp2p, { SimpleStore } from "quickp2p";
 import PlayScreenEgg from "./gui/PlayScreenEgg";
 
 // quickp2p.setStore(new SimpleStore("https://misc.r-labs.io"));
-quickp2p.setStore(new SimpleStore("https://tokens.rodrigo.londrina.br"));
+quickp2p.setStore(
+	new SimpleStore(
+		"https://tokens.rodrigo.londrina.br/.netlify/functions/server"
+	)
+);
 // quickp2p.setStore(new SimpleStore("http://localhost:5000"));
 
 export default class App extends PureComponent {
