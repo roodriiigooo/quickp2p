@@ -1,6 +1,6 @@
 {
-  "name": "rodrigo.app",
-  "homepage": "https://app.rodrigo.londrina.br",
+  "name": "rodrigo.sandbox",
+  "homepage": "https://sandbox.rodrigo.londrina.br",
   "version": "1.0.0",
   "private": true,
   "dependencies": {
